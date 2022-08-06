@@ -68,9 +68,7 @@ const Login = (props) => {
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log("check");
-      setFormIsValid(
-        userState.isValid.emailIsValid && userState.isValid.passwordIsValid
-      );
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
     return () => {
       console.log("clean");
